@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOTA'S CRAZY BIRTHDAY EXPERIENCE 🎂😂</title>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;800&display=swap <view-source:https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;800&display=swap>" rel="stylesheet">
+<style>
+/* ===== COLORS: change these to restyle the whole site ===== */
+:root{--pink:#ff5fa2;--purple:#7b3fe4;--red:#ff3b4e;--yellow:#ffd23f;--pastel:#ffe3f1;--dark:#2b1055;
+--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;font:800 1.05rem/1.5 Nunito,system-ui,sans-serif;color:var(--dark);overflow-x:hidden;
+background:linear-gradient(135deg,#ffd6ec,#e5d4ff,#fff2b8,#ffd6ec);background-size:300% 300%;animation:bg 14s ease infinite}
+@keyframes bg{50%{background-position:100% 50%}}
+h1,h2,h3{font-family:"Bagel Fat One","Arial Rounded MT Bold",system-ui,sans-serif;font-weight:400;margin:0;line-height:1.05}
+h2{font-size:clamp(1.9rem,8vw,3.2rem);text-align:center;color:var(--purple);margin-bottom:1.5rem;text-shadow:3px 3px 0 var(--yellow)}
+section{padding:4rem 1rem;max-width:900px;margin:0 auto;text-align:center}
+.locked{display:none}
+button{font:inherit;font-weight:800;border:0;border-radius:999px;padding:.9rem 1.5rem;cursor:pointer;color:#fff;
+background:linear-gradient(180deg,var(--pink),var(--red));box-shadow:0 6px 0 #b3203c,0 10px 20px rgba(0,0,0,.2);transition:transform .1s}
+button:active{transform:translateY(4px);box-shadow:0 2px 0 #b3203c}
+button:focus-visible{outline:4px solid var(--yellow);outline-offset:3px}
+button.big{font-size:1.3rem;padding:1.1rem 2rem;animation:pulse 1.2s infinite}
+button.alt{background:linear-gradient(180deg,#9a63ff,var(--purple));box-shadow:0 6px 0 #4a1fa8,0 10px 20px rgba(0,0,0,.2)}
+button.gold{background:var(--yellow);color:var(--dark);box-shadow:0 6px 0 #c9971a,0 10px 20px rgba(0,0,0,.2)}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.card{background:#fff;border-radius:28px;padding:1.4rem;box-shadow:0 12px 30px rgba(123,63,228,.3);border:4px solid var(--purple)}
+
+/* Intro */
+#intro{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1rem;padding-top:calc(4rem + var(--safe-t))}
+#intro .warn{font-size:clamp(2.2rem,12vw,5rem);color:var(--red);animation:blink .8s infinite}
+@keyframes blink{50%{opacity:.35;transform:scale(1.05)}}
+#intro .big-title{font-size:clamp(1.4rem,7vw,2.6rem);color:var(--purple)}
+#intro .hb{font-size:clamp(2.2rem,11vw,4.5rem);background:linear-gradient(90deg,var(--pink),var(--purple),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+#intro p{max-width:28ch;margin:0 auto 1rem;font-size:1.15rem}
+.float{position:absolute;font-size:2rem;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-25px) rotate(12deg)}}
+
+/* Report */
+.row{display:flex;justify-content:space-between;gap:.5rem;text-align:left;margin-top:.8rem}
+.row b{color:var(--purple)}
+.bar{height:16px;border-radius:99px;background:#eee;overflow:hidden;margin-top:.25rem}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--yellow),var(--pink),var(--red));transition:width 1.6s cubic-bezier(.2,.9,.3,1)}
+#loadbar{max-width:320px;margin:1rem auto 0}
+#loadmsg{color:var(--red);min-height:1.5em;margin-top:.5rem}
+.secret{background:none;box-shadow:none;padding:.3rem;opacity:.35;font-size:1.2rem}
+
+/* Quiz */
+#qbox .opt{display:block;width:100%;margin:.7rem 0;background:var(--pastel);color:var(--dark);box-shadow:0 4px 0 #e2a5c6;text-align:left;border-radius:18px}
+#react{min-height:3.2em;margin:.8rem 0;color:var(--red);font-size:1.15rem}
+.shake{animation:shake .5s}
+@keyframes shake{20%,60%{transform:translateX(-10px) rotate(-1deg)}40%,80%{transform:translateX(10px) rotate(1deg)}}
+
+/* Gallery */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem .8rem}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}}
+.pol{background:#fff;padding:.5rem .5rem .8rem;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.25);transform:rotate(var(--r));transition:transform .25s;cursor:pointer;border:0;color:var(--dark);font-size:.9rem}
+.pol:nth-child(odd){--r:-2.5deg}.pol:nth-child(even){--r:2.5deg}
+.pol:hover{transform:rotate(0) scale(1.07);z-index:2}
+.pol img{display:block;width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:.4rem;background:#eee}
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,640px);text-align:center;color:#fff}
+dialog::backdrop{background:rgba(43,16,85,.88)}
+dialog img{width:100%;max-height:70vh;object-fit:contain;border-radius:12px}
+
+/* Awards */
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.award{background:linear-gradient(160deg,#fff,var(--pastel));border:4px solid var(--yellow);border-radius:22px;padding:1.2rem;cursor:pointer;color:var(--dark);box-shadow:none;font-size:1.05rem}
+.award span{display:block;font-size:2.6rem}
+.spin{animation:spin .9s}
+@keyframes spin{to{transform:rotate(360deg) scale(1.1)}}
+
+/* Cake */
+.cake{position:relative;width:240px;height:250px;margin:1rem auto}
+.cake div{position:absolute;left:50%;transform:translateX(-50%);border-radius:14px}
+.l1{bottom:0;width:230px;height:70px;background:linear-gradient(#ff8fc0,#ff5fa2);box-shadow:0 10px 0 #c93d7c}
+.l2{bottom:70px;width:170px;height:60px;background:linear-gradient(#fff,#ffd9ea);box-shadow:0 8px 0 #e8a5c4}
+.l3{bottom:130px;width:110px;height:50px;background:linear-gradient(#b48cff,#7b3fe4);box-shadow:0 8px 0 #4a1fa8}
+.cake .candle{width:10px;height:36px;bottom:180px;background:repeating-linear-gradient(45deg,#fff,#fff 6px,var(--red) 6px,var(--red) 12px);border-radius:3px}
+.flame{position:absolute;left:50%;top:-22px;width:14px;height:22px;transform:translateX(-50%);background:radial-gradient(#fff,var(--yellow) 50%,#ff8a00);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:flick .25s infinite alternate;transition:opacity .4s}
+@keyframes flick{to{transform:translateX(-50%) scale(1.15) rotate(5deg)}}
+.out .flame{opacity:0;animation:none}
+#wishmsg{min-height:3em;color:var(--red);font-size:1.2rem;margin-top:1rem}
+
+/* Letter */
+#env{width:min(300px,85vw);height:190px;margin:1rem auto;position:relative;background:#ff9cc7;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+#env::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,transparent 49%,#ff7ab3 50%) , linear-gradient(to bottom left,transparent 49%,#ff7ab3 50%);background-size:50% 60%;background-repeat:no-repeat;background-position:left bottom,right bottom}
+#env .flap{position:absolute;top:0;left:0;width:100%;height:100px;background:#ff6fae;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .6s;z-index:3}
+#env .heart{position:absolute;left:50%;top:78px;transform:translateX(-50%);font-size:2rem;z-index:4}
+#env.open .flap{transform:rotateX(180deg);z-index:0}
+#env.open .heart{display:none}
+#letter{display:none;text-align:left;white-space:pre-wrap;font-size:1.1rem;line-height:1.7;margin-top:1.2rem;background:#fffdf4;border-color:var(--pink);min-height:6rem}
+#letter.show{display:block}
+
+/* Fun / finale */
+#finale .reveal{display:none}
+#finale.go .reveal{display:block}
+#finale.go .launch{display:none}
+.mega{font-size:clamp(2.4rem,13vw,5.5rem);background:linear-gradient(90deg,var(--red),var(--pink),var(--purple),var(--yellow));-webkit-background-clip:text;background-clip:text;color:transparent;animation:pulse 1.4s infinite}
+.fin-sub{font-size:1.3rem;margin:1rem auto;max-width:26ch;white-space:pre-line}
+.pop{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:30;width:min(86vw,360px);padding:1.4rem;background:#fff;border:4px solid var(--red);border-radius:24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4);animation:popin .35s cubic-bezier(.3,1.6,.5,1)}
+@keyframes popin{from{transform:translate(-50%,-50%) scale(.3);opacity:0}}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:20}
+#music{position:fixed;right:10px;top:calc(10px + var(--safe-t));z-index:25;display:flex;gap:.5rem;align-items:center;background:#fff;border:3px solid var(--purple);border-radius:99px;padding:.3rem .5rem}
+#music button{padding:.4rem .8rem;font-size:.9rem;box-shadow:none}
+#music input{width:70px}
+#edbtn{position:fixed;left:10px;bottom:calc(10px + var(--safe-b));z-index:25;padding:.5rem .9rem;font-size:.9rem}
+#ed{background:#fff;color:var(--dark);border-radius:22px;padding:1rem;width:min(94vw,560px);max-height:88vh;overflow:auto;text-align:left;border:4px solid var(--purple)}
+#ed summary{cursor:pointer;font-weight:800;color:var(--purple);margin:.6rem 0}
+#ed label{display:block;margin:.5rem 0;font-size:.85rem}
+#ed textarea{display:block;width:100%;font:inherit;font-weight:400;border:2px solid var(--pastel);border-radius:12px;padding:.5rem;margin-top:.2rem}
+#ed input[type=file]{display:block;margin-top:.2rem;max-width:100%}
+.edbar{position:sticky;bottom:-1rem;background:#fff;display:flex;gap:.5rem;flex-wrap:wrap;padding:.7rem 0 .2rem}
+.edbar button{padding:.6rem 1rem;font-size:.9rem}
+footer{padding:2rem 1rem calc(3rem + var(--safe-b));text-align:center}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="music">
+  <button id="mbtn" aria-label="Music on or off">🎵 Music OFF</button>
+  <input id="vol" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Volume"><button id="mimp" aria-label="Import an MP3 file" title="Import MP3">📂</button><input type="file" id="mfile" accept="audio/*,.mp3" hidden>
+</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<button id="edbtn" class="alt" aria-label="Personalize">✏️ Personalize</button>
+<dialog id="ed"><h3>✏️ Personalize</h3><div id="edBody"></div><div class="edbar"><button id="edSave">Save ✔</button><button class="alt" id="edReset">Reset all</button><button class="gold" id="edClose">Close</button></div></dialog>
+
+<!-- 1. INTRO -->
+<section id="intro">
+  <span class="float" style="left:8%;top:12%">🎈</span><span class="float" style="right:10%;top:18%;animation-delay:1s">⭐</span>
+  <span class="float" style="left:12%;bottom:12%;animation-delay:2s">💖</span><span class="float" style="right:8%;bottom:16%;animation-delay:3s">🎈</span>
+  <div class="warn" data-k="ui.warn"></div>
+  <div class="big-title" data-k="ui.warn2"></div>
+  <div class="hb" id="hbText" data-k="ui.heading"></div>
+  <p id="introSub"></p>
+  <button class="big" id="startBtn" data-k="ui.start"></button>
+</section>
+
+<main id="main" class="locked">
+
+<!-- 2. REPORT -->
+<section id="report">
+  <h2 data-k="ui.tReport"></h2>
+  <div class="card" id="reportCard"></div>
+  <p><button class="alt" id="calcBtn" data-k="ui.calc"></button></p>
+  <div class="bar" id="loadbar"><i id="loadfill"></i></div>
+  <div id="loadmsg"></div>
+  <button class="secret" id="secretBtn" aria-label="Secret button">🤍</button>
+</section>
+
+<!-- 3. QUIZ -->
+<section id="quiz">
+  <h2 data-k="ui.tQuiz"></h2>
+  <div class="card" id="qbox"></div>
+</section>
+
+<!-- 4. GALLERY -->
+<section id="gallery">
+  <h2 data-k="ui.tGallery"></h2>
+  <div class="grid" id="grid"></div>
+  <p><button id="moreLove" data-k="ui.more"></button></p>
+</section>
+<dialog id="lb"><img id="lbImg" alt=""><p id="lbCap"></p><form method="dialog"><button>Close</button></form></dialog>
+
+<!-- 5. AWARDS -->
+<section id="awardsSec">
+  <h2 data-k="ui.tAwards"></h2>
+  <div class="awards" id="awards"></div>
+  <p><button class="gold" id="dontClick" data-k="ui.dont"></button></p>
+</section>
+
+<!-- 6. CAKE -->
+<section id="cakeSec">
+  <h2 data-k="ui.tCake"></h2>
+  <div class="cake" id="cake">
+    <div class="l1"></div><div class="l2"></div><div class="l3"></div>
+    <div class="candle" style="margin-left:-30px"><i class="flame"></i></div>
+    <div class="candle"><i class="flame"></i></div>
+    <div class="candle" style="margin-left:30px"><i class="flame"></i></div>
+  </div>
+  <button class="big" id="blowBtn">BLOW THE CANDLES! 💨</button>
+  <div id="wishmsg"></div>
+</section>
+
+<!-- 7. LETTER -->
+<section id="letterSec">
+  <h2 data-k="ui.tLetter"></h2>
+  <div id="env"><div class="flap"></div><div class="heart">💌</div></div>
+  <button class="alt" id="openBtn" data-k="ui.open"></button>
+  <div id="letter" class="card"></div>
+</section>
+
+<!-- 8. FINALE -->
+<section id="finale">
+  <div class="launch"><h2 data-k="ui.tFinale"></h2><button class="big" id="finBtn" data-k="ui.finStart"></button></div>
+  <div class="reveal">
+    <div class="mega" id="finTitle"></div>
+    <div class="fin-sub" id="finSub"></div>
+    <h3 id="finLove" style="color:var(--red);font-size:clamp(1.5rem,7vw,2.4rem)"></h3>
+    <p><button class="gold" id="copyBtn">🔗 Copy link</button></p>
+  </div>
+</section>
+<footer data-k="ui.footer"></footer>
+</main>
+
+<audio id="song" loop preload="none"></audio>
+
+<script>
+/* =====================================================
+   CUSTOMIZATION SECTION: edit everything here
+   ===================================================== */
+const CONFIG = {
+  name: "Mariam",                 // her name
+  nick: "Tota",                   // her nickname
+  me: "YOUR NAME",                // your name (signs the letter)
+  music: "music/birthday-song.mp3",   // your song file
+  introSub: "Today is the day the world became 100% more dramatic, beautiful, and expensive.",
+
+  // Photos: change the file names/captions. Put your pictures in the images folder.
+  photos: [
+    {src:"images/photo1.jpg", cap:"The day I knew 💘"}, {src:"images/photo2.jpg", cap:"Peak cuteness 📸"},
+    {src:"images/photo3.jpg", cap:"You look hungry 🍕"}, {src:"images/photo4.jpg", cap:"My favorite view"},
+    {src:"images/photo5.jpg", cap:"Trouble ❤️"}, {src:"images/photo6.jpg", cap:"Us being silly"},
+    {src:"images/photo7.jpg", cap:"Best day ever"}, {src:"images/photo8.jpg", cap:"Forever starts here"}
+  ],
+
+  // Report card (stat = text, bar = 0-100 progress bar)
+  report: [
+    ["NAME","Mariam"],["NICKNAME","Tota"],["STATUS","Too Beautiful To Handle"],
+    ["DRAMA LEVEL","100000%",100],["CUTENESS","ILLEGAL 🚔",100],["ANGER SPEED","LIGHTNING ⚡",95],
+    ["BOYFRIEND PATIENCE","UNDER INVESTIGATION 😂",12],["SPECIAL POWER","Making me fall in love every single day."]
+  ],
+
+  // Quiz: each answer has its own funny reaction. "emoji" is what rains down.
+  quiz: [
+    {q:"Who is always right?", a:[["Mariam","Correct! And also Tota. Same person, double the correctness."],["Tota","Correct! Wow, you know yourself so well."],["Obviously Tota.","Of course. The judges did not even need to check."]]},
+    {q:'What happens when Tota says "I\'m fine"?', a:[["Everything is fine.","WRONG. Sir, please step away from the phone."],["Run for your life.","Smart. You may live to see tomorrow."],["Emergency meeting immediately.","Correct. Snacks must be ready in 5 minutes."]]},
+    {q:"Who is the boss in this relationship?", a:[["Tota","Yes ma'am. Paperwork has been filed."],["Also Tota","Correct. The boyfriend is an intern."],["The boyfriend (lol)","ERROR. This answer has been deleted by the CEO. 😂"]]},
+    {q:"Who apologizes first?", a:[["The boyfriend","Right. Even when he did nothing. Especially then."],["Nobody ever","Lies! But we love your confidence."],["Whoever is hungrier","Scientifically accurate. Pizza solves everything."]]},
+    {q:"Who loves the other person more?", a:[["Mariam","Awww, but wrong 🥹"],["The boyfriend","Awww, but wrong 🥹"],["It's a tie... forever","Correct answer. I'd pick you again in every lifetime. ❤️"]]}
+  ],
+  quizEnd: "TEST COMPLETE! Result: you are 100% the love of my life. The boyfriend survived. Barely. 😂",
+
+  awards: [
+    ["🏆","Best Girlfriend in the Universe","Confirmed by 8 billion people (I asked)."],
+    ["👑","Professional Drama Queen","A gold medal in every Olympic drama sport."],
+    ["😍","World's Most Beautiful Human","The judges cried. Results are final."],
+    ["💘","CEO of Stealing My Heart","No refunds, no returns, no escape."],
+    ["🍔","Most Dangerous When Hungry","Please feed her before any conversation."],
+    ["💍","Official Owner of My Heart","Lifetime license. Never expires."]
+  ],
+
+  // Random funny popups that appear while she explores
+  popups: ["Breaking news: Tota is still the cutest 📰","Reminder: you are always right ✅","Snack check! Have you eaten? 🍫","This website was approved by Tota (obviously)","Boyfriend status: still obsessed 😍"],
+  secret: "Your boyfriend is officially obsessed with you. 🤍",
+  dontClick: "I SAID DON'T CLICK 😂 Now you owe me a kiss. 💋",
+  wish: "CONGRATULATIONS! YOUR WISH HAS BEEN SENT TO HEAVEN. NO REFUNDS! 😂",
+  loadSteps: ["Calculating how beautiful Tota is...","Scanning cuteness levels...","Consulting the universe..."],
+  loadError: "ERROR: TOO BEAUTIFUL TO CALCULATE.",
+
+  // Love letter: edit freely. \n makes a new line.
+  letter: "My dearest Tota,\n\nHappy birthday, my love. I still don't know how I got this lucky, and I'm afraid to ask in case someone takes you back.\n\nYou are my favorite person, my favorite drama, and my safest place. You make the hard days softer and the good days unforgettable.\n\nThank you for every laugh, every fight we survived (I lost all of them), and every day you choose me.\n\nI promise to keep making you laugh, to always feed you on time, and to love you more every single year.\n\nForever yours,\n",
+  finTitle: "HAPPY BIRTHDAY TOTA!!! ❤️",
+  finSub: "You're my favorite person,\nmy favorite headache,\nmy favorite reason to smile,\nand my favorite forever.",
+  finLove: "I LOVE YOU, YOU CRAZY HUMAN! 😂❤️",
+
+  // Titles and button labels
+  ui: {
+    warn:"WARNING!!! 🚨", warn2:"EXTREMELY CUTE HUMAN DETECTED!", heading:"Happy Birthday TOTA! 🎂", start:"CLICK HERE IF YOU DARE 😂",
+    tReport:"OFFICIAL TOTA REPORT 📋", calc:"How beautiful is Tota? 🔍", tQuiz:"BOYFRIEND SURVIVAL TEST 📝",
+    tGallery:"OUR PHOTO GALLERY ❤️", more:"I WANT MORE LOVE! 💕", tAwards:"TOTA'S AWARDS 🏆", dont:"DO NOT CLICK 🚫",
+    tCake:"TOTA, MAKE A WISH! 🎂", tLetter:"THE SECRET LOVE LETTER ❤️", open:"OPEN YOUR SECRET MESSAGE",
+    tFinale:"ONE LAST THING...", finStart:"🎆 START THE FINALE", footer:"Made with love 💖"
+  }
+};
+/* ===================== END CUSTOMIZATION ===================== */
+
+/* ---------- Saved personalization (typed texts) ---------- */
+const DEFAULTS = JSON.parse(JSON.stringify(CONFIG));
+const SKIP = p => p === "music" || /^photos\.\d+\.src$/.test(p);
+const leaves = (o,p=[]) => typeof o==="string" ? [[p.join("."),o]] : (o && typeof o==="object") ? Object.keys(o).flatMap(k => leaves(o[k],p.concat(k))) : [];
+const getPath = (o,p) => p.split(".").reduce((a,k) => a && a[k], o);
+const setPath = (o,p,v) => { const k=p.split("."), l=k.pop(), t=k.reduce((a,x)=>a&&a[x],o); if(t && l in t) t[l]=v; };
+const enc = o => btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+const dec = s => JSON.parse(decodeURIComponent(escape(atob(s))));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let saved = {}; try { saved = JSON.parse(localStorage.getItem("tota-config")||"{}"); } catch(e){}
+const shared = location.hash.startsWith("#t=");          // opened from a copied link
+if(shared){ try { saved = dec(location.hash.slice(3)); } catch(e){} }
+for(const k in saved) setPath(CONFIG,k,saved[k]);
+const changed = () => { const o={}; leaves(CONFIG).forEach(([k,v]) => { if(!SKIP(k) && v!==getPath(DEFAULTS,k)) o[k]=v; }); return o; };
+document.querySelectorAll("[data-k]").forEach(e => e.textContent = getPath(CONFIG,e.dataset.k));
+
+const $ = id => document.getElementById(id);
+const rand = (a,b) => a + Math.random()*(b-a);
+const song = $("song"); song.src = CONFIG.music;
+
+/* ---------- Popup helper ---------- */
+function popup(msg, ms=3500){
+  const d = document.createElement("div"); d.className = "pop"; d.setAttribute("role","status"); d.textContent = msg;
+  d.onclick = () => d.remove(); document.body.appendChild(d); setTimeout(() => d.remove(), ms);
+}
+
+/* ---------- Particle effects (confetti, hearts, balloons, fireworks) ---------- */
+const cv = $("fx"), ctx = cv.getContext("2d"); let P = [], raf = null;
+function resize(){ const r = devicePixelRatio||1; cv.width = innerWidth*r; cv.height = innerHeight*r; ctx.setTransform(r,0,0,r,0,0); }
+resize(); addEventListener("resize", resize);
+const COLS = ["#ff5fa2","#7b3fe4","#ff3b4e","#ffd23f","#fff","#7de3ff"];
+function confetti(n=150){ for(let i=0;i<n;i++) P.push({t:"c",x:rand(0,innerWidth),y:rand(-300,-10),vx:rand(-1.5,1.5),vy:rand(2,5),a:rand(0,6),va:rand(-.2,.2),w:rand(6,12),h:rand(8,16),c:COLS[i%COLS.length]}); go(); }
+function rise(emoji,n=30,x,y){ for(let i=0;i<n;i++) P.push({t:"e",e:emoji,x:x??rand(0,innerWidth),y:y??innerHeight+30,vx:rand(-1.2,1.2),vy:rand(-5,-2),s:rand(18,42),l:200}); go(); }
+function rain(emoji,n=40){ for(let i=0;i<n;i++) P.push({t:"e",e:emoji,x:rand(0,innerWidth),y:rand(-400,0),vx:rand(-1,1),vy:rand(3,6),s:rand(22,40),l:300}); go(); }
+function firework(x=rand(60,innerWidth-60),y=rand(80,innerHeight*.5)){ const c=COLS[Math.floor(rand(0,COLS.length))]; for(let i=0;i<70;i++){const a=rand(0,6.28),s=rand(1,6);P.push({t:"f",x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:70,c});} go(); }
+function go(){ if(!raf) raf = requestAnimationFrame(tick); }
+function tick(){
+  ctx.clearRect(0,0,innerWidth,innerHeight);
+  P = P.filter(p => p.y < innerHeight+60 && p.y > -80 && (p.l===undefined || p.l>0));
+  for(const p of P){
+    p.x += p.vx; p.y += p.vy;
+    if(p.l!==undefined) p.l--;
+    if(p.t==="c"){ p.a += p.va; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.a); ctx.fillStyle=p.c; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore(); }
+    else if(p.t==="e"){ ctx.font = p.s+"px serif"; ctx.fillText(p.e,p.x,p.y); }
+    else { p.vy += .06; ctx.globalAlpha = Math.max(p.l/70,0); ctx.fillStyle=p.c; ctx.beginPath(); ctx.arc(p.x,p.y,2.5,0,6.28); ctx.fill(); ctx.globalAlpha=1; }
+  }
+  raf = P.length ? requestAnimationFrame(tick) : null;
+}
+function celebrate(){ confetti(220); rise("🎈",24); rise("❤️",16); setTimeout(()=>firework(),300); }
+function shake(el){ el.classList.remove("shake"); void el.offsetWidth; el.classList.add("shake"); }
+
+/* ---------- Music ---------- */
+const mbtn = $("mbtn");
+function setMusic(on){
+  if(on){ song.play().then(()=>mbtn.textContent="🎵 Music ON").catch(()=>popup("Music file not found. Add music/birthday-song.mp3 🎶")); }
+  else { song.pause(); mbtn.textContent="🎵 Music OFF"; }
+}
+mbtn.onclick = () => setMusic(song.paused);
+$("vol").oninput = e => song.volume = e.target.value; song.volume = .6;
+
+/* ---------- 1. Intro ---------- */
+$("introSub").textContent = CONFIG.introSub;
+let popTimer;
+$("startBtn").onclick = () => {
+  celebrate(); if(song.paused) setMusic(true);
+  const m = $("main"); m.classList.remove("locked");
+  setTimeout(() => $("report").scrollIntoView({behavior:"smooth"}), 900);
+  popTimer = setInterval(() => popup(CONFIG.popups[Math.floor(Math.random()*CONFIG.popups.length)], 3000), 28000);
+  animateBars();
+};
+
+/* ---------- 2. Report ---------- */
+$("reportCard").innerHTML = CONFIG.report.map(r =>
+  `<div class="row"><span>${esc(r[0])}:</span><b>${esc(r[1])}</b></div>` + (r[2]!==undefined ? `<div class="bar"><i data-w="${r[2]}"></i></div>` : "")).join("");
+function animateBars(){ setTimeout(()=>document.querySelectorAll(".bar i[data-w]").forEach(b=>b.style.width=b.dataset.w+"%"),500); }
+$("secretBtn").onclick = () => { popup(CONFIG.secret); rise("💖",14); };
+let calcBusy = false;
+$("calcBtn").onclick = () => {
+  if(calcBusy) return; calcBusy = true;
+  const msg = $("loadmsg"), fill = $("loadfill"); fill.style.transition="none"; fill.style.width="0";
+  let s = 0; msg.style.color = "var(--dark)"; msg.textContent = CONFIG.loadSteps[0];
+  setTimeout(()=>{ fill.style.transition="width 3.5s linear"; fill.style.width="99%"; },50);
+  const iv = setInterval(()=>{ s++; msg.textContent = CONFIG.loadSteps[s % CONFIG.loadSteps.length]; },1100);
+  setTimeout(()=>{ clearInterval(iv); msg.style.color="var(--red)"; msg.textContent = CONFIG.loadError; shake($("report")); rise("😍",20); calcBusy=false; },3700);
+};
+
+/* ---------- 3. Quiz ---------- */
+let qi = 0; const qbox = $("qbox");
+function showQ(){
+  if(qi >= CONFIG.quiz.length){ qbox.innerHTML = `<h3 style="color:var(--purple)">${esc(CONFIG.quizEnd)}</h3><p><button id="again">Play again 🔁</button></p>`; confetti(120); $("again").onclick=()=>{qi=0;showQ();}; return; }
+  const q = CONFIG.quiz[qi];
+  qbox.innerHTML = `<p>Question ${qi+1} of ${CONFIG.quiz.length}</p><h3>${esc(q.q)}</h3>` +
+    q.a.map((a,i)=>`<button class="opt" data-i="${i}">${"ABC"[i]}. ${esc(a[0])}</button>`).join("") + `<div id="react"></div>`;
+  qbox.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    qbox.querySelectorAll(".opt").forEach(x => x.disabled = true);
+    $("react").textContent = q.a[b.dataset.i][1]; shake(qbox);
+    rain(["😂","🤣","🙈"][qi%3],18); if(qi%2) confetti(60);
+    const n = document.createElement("button"); n.className="alt"; n.textContent = qi===CONFIG.quiz.length-1 ? "See my result 🏁" : "Next question ➡️";
+    n.onclick = () => { qi++; showQ(); }; qbox.appendChild(n);
+  });
+}
+showQ();
+
+/* ---------- 4. Gallery ---------- */
+const ph = n => "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#ffd6ec"/><text x="200" y="190" font-size="80" text-anchor="middle">📷</text><text x="200" y="260" font-size="26" text-anchor="middle" fill="#7b3fe4" font-family="sans-serif">Add photo${n}.jpg</text></svg>`);
+const IMGS = [];
+CONFIG.photos.forEach((p,i) => {
+  const b = document.createElement("button"); b.className = "pol";
+  b.innerHTML = `<img src="${esc(p.src)}" alt="${esc(p.cap)}" loading="lazy"><span>${esc(p.cap)}</span>`;
+  const img = b.querySelector("img"); IMGS[i] = img; img.onerror = () => { img.onerror=null; img.src = ph(i+1); };
+  b.onclick = e => { rise("❤️",8,e.clientX,e.clientY); $("lbImg").src = img.src; $("lbImg").alt = p.cap; $("lbCap").textContent = p.cap; $("lb").showModal(); };
+  $("grid").appendChild(b);
+});
+$("lb").addEventListener("click", e => { if(e.target === $("lb")) $("lb").close(); });
+$("moreLove").onclick = () => { rise("❤️",60); rise("💖",40); rise("💕",40); popup("Love level: MAXIMUM 💕"); };
+
+/* ---------- 5. Awards ---------- */
+CONFIG.awards.forEach(a => {
+  const b = document.createElement("button"); b.className = "award";
+  b.innerHTML = `<span>${esc(a[0])}</span>${esc(a[1])}`;
+  b.onclick = e => { b.classList.remove("spin"); void b.offsetWidth; b.classList.add("spin"); rise(a[0],12,e.clientX,e.clientY); confetti(50); popup(a[2],2800); };
+  $("awards").appendChild(b);
+});
+$("dontClick").onclick = () => { document.body.classList.remove("shake"); shake(document.body); rain("🐔",40); popup(CONFIG.dontClick); };
+
+/* ---------- 6. Cake ---------- */
+$("blowBtn").onclick = () => {
+  if($("cake").classList.contains("out")) { $("cake").classList.remove("out"); $("wishmsg").textContent=""; $("blowBtn").textContent="BLOW THE CANDLES! 💨"; return; }
+  $("cake").classList.add("out"); celebrate(); shake($("cakeSec"));
+  $("wishmsg").textContent = CONFIG.wish; $("blowBtn").textContent = "Relight the candles 🔥";
+};
+
+/* ---------- 7. Letter (typing effect) ---------- */
+let typing = false;
+$("openBtn").onclick = () => {
+  if(typing) return; typing = true; $("env").classList.add("open"); $("openBtn").style.display="none";
+  const L = $("letter"); L.classList.add("show"); const text = CONFIG.letter + CONFIG.me; let i = 0;
+  rise("💖",20);
+  const iv = setInterval(() => { L.textContent = text.slice(0,++i); if(i>=text.length) clearInterval(iv); }, 35);
+  L.scrollIntoView({behavior:"smooth",block:"center"});
+};
+
+/* ---------- 8. Finale ---------- */
+$("finBtn").onclick = () => {
+  $("finale").classList.add("go");
+  $("finTitle").textContent = CONFIG.finTitle; $("finSub").textContent = CONFIG.finSub; $("finLove").textContent = CONFIG.finLove;
+  if(song.paused) setMusic(true);
+  confetti(300); rise("🎈",30); rise("❤️",30);
+  let n = 0; const iv = setInterval(() => { firework(); if(n%3===0) rise("🎈",6); if(n%2===0) rise("💖",6); if(++n>25) clearInterval(iv); }, 700);
+  $("finale").scrollIntoView({behavior:"smooth"});
+};
+
+/* ---------- Storage for your own photos and MP3 (stays in this browser) ---------- */
+let db; try { db = new Promise(res => { const r=indexedDB.open("tota",1); r.onupgradeneeded=()=>r.result.createObjectStore("f"); r.onsuccess=()=>res(r.result); r.onerror=()=>res(null); }); } catch(e){ db = Promise.resolve(null); }
+const dbGet = k => db.then(d => d ? new Promise(r => { const q=d.transaction("f").objectStore("f").get(k); q.onsuccess=()=>r(q.result); q.onerror=()=>r(); }) : undefined);
+const dbSet = (k,v) => db.then(d => d && new Promise(r => { const t=d.transaction("f","readwrite"); t.objectStore("f").put(v,k); t.oncomplete=()=>r(true); t.onerror=()=>r(false); }));
+const shrink = f => new Promise(res => { const im=new Image(); im.onerror=()=>res(null); im.onload=()=>{ const s=Math.min(1,1000/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); URL.revokeObjectURL(im.src); res(c.toDataURL("image/jpeg",.85)); }; im.src=URL.createObjectURL(f); });
+async function setPhoto(i,file){ if(!file || !IMGS[i]) return; const u = await shrink(file); if(u){ IMGS[i].src = u; dbSet("p"+i,u); } }
+CONFIG.photos.forEach((_,i) => dbGet("p"+i).then(u => { if(u) IMGS[i].src = u; }));
+dbGet("m").then(b => { if(b) song.src = URL.createObjectURL(b); });
+
+/* ---------- MP3 import ---------- */
+$("mimp").onclick = () => $("mfile").click();
+$("mfile").onchange = async e => {
+  const f = e.target.files[0]; if(!f) return;
+  dbSet("m",f); song.src = URL.createObjectURL(f); setMusic(true);
+  const b = $("pickMp3"); if(b) b.textContent = "✅ " + f.name;
+};
+
+/* ---------- Personalize panel: type over every text, add photos ---------- */
+if(shared) $("edbtn").style.display = "none";     // she won't see the editor on your shared link
+const GROUPS = {ui:"Titles & buttons",photos:"Photo captions",report:"Report card",quiz:"Quiz",awards:"Awards",popups:"Random popups",loadSteps:"Loading messages"};
+function buildEditor(){
+  const g = {};
+  leaves(CONFIG).filter(([k]) => !SKIP(k)).forEach(([k,v]) => { const t=k.split(".")[0]; const n = typeof CONFIG[t]==="string" ? "Main texts, letter & finale" : (GROUPS[t]||t); (g[n]=g[n]||[]).push([k,v]); });
+  let h = '<details open><summary>📷 Photos</summary><label>Pick up to 8 photos at once (fills the slots in order)<input type="file" id="pAll" accept="image/*" multiple></label>' +
+    CONFIG.photos.map((_,i) => `<label>Photo ${i+1}<input type="file" accept="image/*" data-ph="${i}"></label>`).join("") +
+    '</details><details open><summary>🎶 Music</summary><button id="pickMp3" type="button">Choose an MP3 file</button></details>';
+  Object.keys(g).forEach((n,idx) => {
+    h += `<details ${idx===0?"open":""}><summary>${esc(n)}</summary>` + g[n].map(([k,v]) =>
+      `<label>${esc(k.split(".").map(x => isNaN(x)?x:+x+1).join(" › "))}<textarea data-p="${k}" rows="${v.length>90?5:v.length>40?2:1}">${esc(v)}</textarea></label>`).join("") + "</details>";
+  });
+  $("edBody").innerHTML = h;
+  $("pAll").onchange = e => { [...e.target.files].slice(0,IMGS.length).forEach((f,i) => setPhoto(i,f)); e.target.insertAdjacentText("afterend"," ✅"); };
+  $("edBody").querySelectorAll("[data-ph]").forEach(inp => inp.onchange = () => { setPhoto(+inp.dataset.ph, inp.files[0]); inp.insertAdjacentText("afterend"," ✅"); });
+  $("pickMp3").onclick = () => $("mfile").click();
+}
+$("edbtn").onclick = () => { buildEditor(); $("ed").showModal(); };
+$("edClose").onclick = () => $("ed").close();
+$("edSave").onclick = () => {
+  const o = {}; $("edBody").querySelectorAll("textarea").forEach(t => { if(t.value !== getPath(DEFAULTS,t.dataset.p)) o[t.dataset.p] = t.value; });
+  try { localStorage.setItem("tota-config", JSON.stringify(o)); } catch(e){}
+  history.replaceState(null,"",location.pathname+location.search); location.reload();
+};
+$("edReset").onclick = async () => {
+  if(!confirm("Reset all your texts, photos and music?")) return;
+  try { localStorage.removeItem("tota-config"); } catch(e){}
+  for(let i=0;i<IMGS.length;i++) await dbSet("p"+i,null); await dbSet("m",null);
+  history.replaceState(null,"",location.pathname+location.search); location.reload();
+};
+
+/* ---------- Copy link (last page) ---------- */
+$("copyBtn").onclick = async () => {
+  const ov = changed(), base = location.href.split("#")[0];
+  const url = Object.keys(ov).length ? base + "#t=" + enc(ov) : base;    // your typed texts travel inside the link
+  try { await navigator.clipboard.writeText(url); popup(location.protocol==="file:" ? "Link copied! It only works on this device until the site is uploaded online. 🔗" : "Link copied! 🔗"); }
+  catch(e){ prompt("Copy this link:", url); }
+  rise("🔗",8);
+};
+</script>
+</body>
+</html>
